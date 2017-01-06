@@ -203,11 +203,18 @@ public class AudioRecorderModule extends ReactContextBaseJavaModule implements
             sampleRate = options.getInt("sampleRate");
         }
 
-        recorder.setOutputFormat(format);
-        recorder.setAudioEncoder(encoder);
-        recorder.setAudioEncodingBitRate(bitrate);
-        recorder.setAudioChannels(channels);
-        recorder.setAudioSamplingRate(sampleRate);
+//         recorder.setOutputFormat(format);
+//         recorder.setAudioEncoder(encoder);
+//         recorder.setAudioEncodingBitRate(bitrate);
+//         recorder.setAudioChannels(channels);
+//         recorder.setAudioSamplingRate(sampleRate);
+           
+           recorder.setOutputFormat(format);
+           recorder.setAudioChannels(channels);
+           recorder.setAudioSamplingRate(sampleRate);
+           recorder.setAudioEncodingBitRate(bitrate);
+           recorder.setAudioEncoder(encoder);
+           
 
         Log.d(LOG_TAG, "Recorder using options: (format: " + format + ") (encoder: " + encoder + ") "
                     + "(bitrate: " + bitrate + ") (channels: " + channels + ") (sampleRate: " + sampleRate + ")");
